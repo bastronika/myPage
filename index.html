@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <script src="./jquery.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <title>TL Control</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h4 class="text-center bg-dark text-light">Smart Controller</h4>
+        <div class="row">
+            <div class="col-sm">
+                <div class="card shadow-lg">
+                    <h5 class="card-header bg-warning text-center text-dark">Mode Warning</h5>
+                    <div class="card-body">
+                        <div class="input-group" id="group-warning">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Mulai</span>
+                            </div>
+                            <input type="time" class="form-control" name="warning-mulai" id="warningMulai" value="22:00" />
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Akhir</span>
+                            </div>
+                            <input type="time" class="form-control" name="warning-akhir" id="warningAkhir" value="18:00" />
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <a id="bacaWarning" class="btn btn-primary text-light">Baca</a>
+                            <a id="simpanWarning" class="btn btn-success text-light">Simpan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card shadow-lg">
+                    <h5 class="card-header text-center text-light bg-danger">Jam Sibuk</h5>
+                    <div class="card-body">
+                        <div class="input-group" id="group-sibuk">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Mulai</span>
+                            </div>
+                            <input type="time" class="form-control" name="sibuk-mulai" id="sibukMulai" value="11:00" />
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Akhir</span>
+                            </div>
+                            <input type="time" class="form-control" name="sibuk-akhir" id="sibukAkhir" value="01:00" />
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <a id="bacaSibuk" class="btn btn-primary text-light">Baca</a>
+                            <a id="simpanSibuk" class="btn btn-success text-light">Simpan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <br>
+        <div class="row">
+            <div class="col-sm">
+                <div class="card shadow-lg">
+                    <h5 class="card-header text-light bg-success text-center">Pengaturan Delay Jam Normal</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D1</span>
+                            </div>
+                            <input type="number" class="form-control" name="dn1" id="dn1" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D2</span>
+                            </div>
+                            <input type="number" class="form-control" name="dn2" id="dn2" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D3</span>
+                            </div>
+                            <input type="number" class="form-control" name="dn3" id="dn3" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D4</span>
+                            </div>
+                            <input type="number" class="form-control" name="dn4" id="dn4" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div>
+                            <div class="text-center">
+                                <a id="bacaDelayNormal" class="btn btn-primary text-light">baca</a>
+                                <a id="simpanDelayNormal" class="btn btn-success text-light">Simpan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card shadow-lg">
+                    <h5 class="card-header text-center bg-danger text-light">Pengaturan Delay Jam Sibuk</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D1</span>
+                            </div>
+                            <input type="number" class="form-control" name="ds1" id="ds1" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D2</span>
+                            </div>
+                            <input type="number" class="form-control" name="ds2" id="ds2" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D3</span>
+                            </div>
+                            <input type="number" class="form-control" name="ds3" id="ds3" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">D4</span>
+                            </div>
+                            <input type="number" class="form-control" name="ds4" id="ds4" placeholder="100" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">detik</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div>
+                            <div class="text-center">
+                                <a id="bacaDelaySibuk" class="btn btn-primary text-light">baca</a>
+                                <a id="simpanDelaySibuk" class="btn btn-success text-light">Simpan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    var Socket;
+
+    function init() {
+
+        Socket = new WebSocket('ws://' + window.location.hostname + ':81/');
+
+        Socket.onmessage = function(event) {
+
+            console.log(event.data);
+
+            var data = JSON.parse(event.data);
+
+            if (data.wm) document.getElementById('warningMulai').value = data.wm;
+            if (data.wa) document.getElementById('warningAkhir').value = data.wa;
+            if (data.sm) document.getElementById('sibukMulai').value = data.sm;
+            if (data.sa) document.getElementById('sibukAkhir').value = data.sa;
+
+            if (data.dn1) document.getElementById('dn1').value = data.dn1;
+            if (data.dn2) document.getElementById('dn2').value = data.dn2;
+            if (data.dn3) document.getElementById('dn3').value = data.dn3;
+            if (data.dn4) document.getElementById('dn4').value = data.dn4;
+
+            if (data.ds1) document.getElementById('ds1').value = data.ds1;
+            if (data.ds2) document.getElementById('ds2').value = data.ds2;
+            if (data.ds3) document.getElementById('ds3').value = data.ds3;
+            if (data.ds4) document.getElementById('ds4').value = data.ds4;
+
+        }
+
+
+        Socket.onopen = function(e) {
+            sendText("bacasemua");
+        };
+
+        Socket.onclose = function(e) {
+            console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+            init();
+        }
+
+        Socket.onerror = function(err) {
+            console.error('Socket encountered error: ', err.message, 'Closing socket');
+            Socket.close();
+        }
+    }
+
+    document.getElementById('simpanWarning').addEventListener('click', simpanWarning);
+    document.getElementById('bacaWarning').addEventListener('click', bacaWarning);
+    document.getElementById('simpanSibuk').addEventListener('click', simpanSibuk);
+    document.getElementById('bacaSibuk').addEventListener('click', bacaSibuk);
+    document.getElementById('simpanDelaySibuk').addEventListener('click', simpanDelaySibuk);
+    document.getElementById('bacaDelaySibuk').addEventListener('click', bacaDelaySibuk);
+    document.getElementById('simpanDelayNormal').addEventListener('click', simpanDelayNormal);
+    document.getElementById('bacaDelayNormal').addEventListener('click', bacaDelayNormal);
+
+    function simpanWarning() {
+        var datajson = "{\"wm\":\"";
+        datajson += document.getElementById('warningMulai').value;
+        datajson += "\",\"wa\":\"";
+        datajson += document.getElementById('warningAkhir').value;
+        datajson += "\"}";
+        sendText(datajson);
+    }
+
+    function bacaWarning() {
+        sendText("bw");
+    }
+
+    function simpanSibuk() {
+        var datajson = "{\"sm\":\"";
+        datajson += document.getElementById('sibukMulai').value;
+        datajson += "\",\"sa\":\"";
+        datajson += document.getElementById('sibukAkhir').value;
+        datajson += "\"}";
+        sendText(datajson);
+
+    }
+
+    function bacaSibuk() {
+        sendText("bs");
+    }
+
+    function simpanDelaySibuk() {
+        var datajson = "{\"ds1\":\"";
+        datajson += document.getElementById('ds1').value;
+        datajson += "\",\"ds2\":\"";
+        datajson += document.getElementById('ds2').value;
+        datajson += "\",\"ds3\":\"";
+        datajson += document.getElementById('ds3').value;
+        datajson += "\",\"ds4\":\"";
+        datajson += document.getElementById('ds4').value;
+        datajson += "\"}";
+        sendText(datajson);
+    }
+
+    function bacaDelaySibuk() {
+        sendText("bds");
+    }
+
+    function simpanDelayNormal() {
+        var datajson = "{\"dn1\":\"";
+        datajson += document.getElementById('dn1').value;
+        datajson += "\",\"dn2\":\"";
+        datajson += document.getElementById('dn2').value;
+        datajson += "\",\"dn3\":\"";
+        datajson += document.getElementById('dn3').value;
+        datajson += "\",\"dn4\":\"";
+        datajson += document.getElementById('dn4').value;
+        datajson += "\"}";
+        sendText(datajson);
+    }
+
+    function bacaDelayNormal() {
+        sendText("bdn");
+    }
+
+    function sendText(data) {
+        Socket.send(data);
+    }
+
+    window.onload = function(e) {
+        init();
+    }
+</script>
+
+<footer class="text-center">
+    <p>&copy;copyright 2020 <a href="http://bastronika.com">Bastronika</a> x Adi Joyo Kusumo</p>
+</footer>
+
+</html>
